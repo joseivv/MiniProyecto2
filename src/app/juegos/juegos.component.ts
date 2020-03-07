@@ -21,7 +21,7 @@ export class JuegosComponent implements OnInit {
 
   ngOnInit() {
 
-    this.juegos.getultimosjuegos(this.page).subscribe
+    this.juegos.getultimosjuegos().subscribe
     (data => {
         this.arrayultimos = data['results'];
       },
