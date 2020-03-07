@@ -1,0 +1,19 @@
+img{
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+}
+
+.wrapper{
+    height:100% ;
+    width:100% ;
+    padding: 10%;
+}
+p{
+    color: white
+}
+
+video{
+    height: 60%;
+    width: 60%;
+}

@@ -1,0 +1,20 @@
+<div class="contain-sd p-5">
+<table class="table table-responsive-md bg-warning list">
+  <thead>
+    <tr class="bg-dark text-white">
+      <th>Nombre</th>
+      <th>Cédula</th>
+      <th>email</th>
+      <th>lugar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registro of registro">
+      <th scope="row">{{ registro.nombre }}</th>  
+      <td> {{registro.cedula}} </td>
+      <td> {{registro.email }}</td>
+      <td> {{registro.lugar }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

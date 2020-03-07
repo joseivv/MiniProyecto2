@@ -1,0 +1,144 @@
+<div class="container-sm pt-5  ">
+  <div class="container-dm m-5 bg-warning rounded">
+  <div class="row m-5">
+        <h1 class="text-center pt-3">
+          {{ JuegosDetalles.name}}
+        </h1>
+  </div>
+   <div class="colum-sm p-2 ml-5">
+       <img src="{{JuegosDetalles.background_image}}">
+       <h2 class="mt-5">Descripción</h2>
+  <div class="p-5" [innerHtml]="JuegosDetalles.description"></div>
+  <h3>Fecha de lanzamiento</h3>
+<p class="ml-5"> {{JuegosDetalles.released}} </p>
+<h3>Desarroladores</h3>
+<ul>
+  <li *ngFor="let developer of JuegosDetalles.developers">{{ developer.name }}</li>
+</ul>
+<h3>Plataformas</h3>
+   <ul>
+     <li *ngFor="let platform of JuegosDetalles.platforms">{{ platform.platform.name }}</li>
+   </ul>
+  
+<h3>Trailers</h3>
+  <div *ngFor="let trailer of trailers">
+     <video src="{{trailer['data'].max}}" controls > </video>
+    </div>
+
+  
+<h3>Fotos muestra</h3>
+ 
+    <img *ngFor="let foto of fotos" src="{{foto.image}}">
+
+  <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" (click)="comprarGame()"
+    routerLinkActive="router-link-active">Comprar</button>
+
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ng-container *ngIf="getdetalles">
+  <div class="row">
+    <div class="col-9">
+
+      <div class="game-card">
+        <div class="game-title">{{ getdetalles.name }}</div>
+        <div class="game-rating">{{ getdetalles.metacritic }}</div>
+        <div class="game-cover">
+          <img src="{{ getdetalles.background_image_additional }}">
+        </div>
+        <div class="game-esrb">{{ getdetalles.esrb_rating.name }}</div>
+        <div class="game-description" [innerHTML]="getdetalles.description"></div>
+      </div>
+    </div>
+    <div class="col-3">
+ 
+      <div class="game-card">
+        <div class="game-title">Publishers</div>
+        <div class="game-rating-body">
+          <ul>
+            <li *ngFor="let publisher of getdetalles.publishers">{{ publisher.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+   
+      <div class="game-card">
+        <div class="game-title">Developers</div>
+        <div class="game-rating-body">
+          <ul>
+            <li *ngFor="let developer of getdetalles.developers">{{ developer.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+  
+      <div class="game-card">
+        <div class="game-title">Platforms</div>
+        <div class="game-rating-body">
+          <ul>
+            <li *ngFor="let platform of getdetalles.platforms">{{ platform.platform.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+  
+      <div class="game-card">
+        <div class="game-title">Genres</div>
+        <div class="game-rating-body">
+          <ul>
+            <li *ngFor="let genre of getdetalles.genres">{{ genre.name }}</li>
+          </ul>
+        </div>
+      </div>
+
+   
+      <div class="game-card">
+        <div class="game-title">Reviews</div>
+        <div class="game-rating-body">
+          <ul>
+            <li>RAWG API: {{ getdetalles.rating }}</li>
+            <li>Metacritic: {{ getdetalles.metacritic }}</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="game-card">
+        <div class="game-title">Social Media</div>
+        <div class="game-rating-body">
+          <ul>
+            <li><a href="{{ getdetalles.reddit_url }}" target="_blank">Reddit</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container> -->

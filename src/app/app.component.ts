@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import listademanolos from '../assets/json/manolo.json';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'miniproyecto-dos';
+  manolos: any = listademanolos;
 }
